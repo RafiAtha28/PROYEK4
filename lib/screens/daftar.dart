@@ -42,7 +42,6 @@ class DaftarPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10.0),
                 ),
                 child: TextFormField(
-                  obscureText: true,
                   style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
                     hintText: 'Masukkan Username',

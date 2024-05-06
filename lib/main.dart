@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:perfectbody/screens/main_page.dart'; // Sesuaikan dengan nama aplikasi dan struktur folder Anda
+import 'package:perfectbody/screens/login.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MainPage(), // Sesuaikan dengan halaman utama aplikasi Anda
+      home: LoginPage(), // Sesuaikan dengan halaman utama aplikasi Anda
     );
   }
 }

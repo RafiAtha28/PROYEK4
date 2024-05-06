@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'login.dart';
 
-class DaftarPage extends StatelessWidget {
+class SurveyKebugaranPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +12,7 @@ class DaftarPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Masuk ke Perfect Body Form',
+                'Survey Kebugaran Diri',
                 style: TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
@@ -28,7 +28,23 @@ class DaftarPage extends StatelessWidget {
                 child: TextFormField(
                   style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
-                    hintText: 'Masukkan Email',
+                    hintText: 'Tinggi Badan',
+                    hintStyle: TextStyle(color: Colors.white),
+                    border: InputBorder.none,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10.0),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 10.0),
+                decoration: BoxDecoration(
+                  color: Colors.red,
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: TextFormField(
+                  style: TextStyle(color: Colors.white),
+                  decoration: InputDecoration(
+                    hintText: 'Berat Badan',
                     hintStyle: TextStyle(color: Colors.white),
                     border: InputBorder.none,
                   ),
@@ -45,7 +61,7 @@ class DaftarPage extends StatelessWidget {
                   obscureText: true,
                   style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
-                    hintText: 'Masukkan Username',
+                    hintText: 'Jumlah Olahraga Selama Seminggu( Satuan Hari)',
                     hintStyle: TextStyle(color: Colors.white),
                     border: InputBorder.none,
                   ),
@@ -62,7 +78,7 @@ class DaftarPage extends StatelessWidget {
                   obscureText: true,
                   style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
-                    hintText: 'Masukkan Password',
+                    hintText: 'Lama Berolahraga Selama Sehari ( Satuan Menit )',
                     hintStyle: TextStyle(color: Colors.white),
                     border: InputBorder.none,
                   ),
@@ -79,7 +95,7 @@ class DaftarPage extends StatelessWidget {
                   obscureText: true,
                   style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
-                    hintText: 'Ulangi Password',
+                    hintText: 'Tanggal Terakhir Berolahraga',
                     hintStyle: TextStyle(color: Colors.white),
                     border: InputBorder.none,
                   ),
@@ -105,33 +121,6 @@ class DaftarPage extends StatelessWidget {
                     //primary: Color(0xFF8B4513), // Merah kecoklatan
                     backgroundColor: Color(0xFF8B4513), // Merah kecoklatan
                     minimumSize: Size(100, 50),
-                  ),
-                ),
-              ),
-              SizedBox(height: 10.0),
-              GestureDetector(
-                onTap: () {
-                  // Tambahkan logika untuk navigasi ke halaman register di sini
-                },
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    minimumSize:
-                        Size(200, 50), // Set lebar dan tinggi minimum tombol
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              LoginPage()), // Ganti HalamanTujuan dengan halaman yang ingin dituju
-                    );
-                  },
-                  child: Text(
-                    'Sudah punya akun? Login',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      decoration: TextDecoration.underline,
-                    ),
                   ),
                 ),
               ),
