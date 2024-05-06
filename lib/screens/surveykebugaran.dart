@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'login.dart';
+import 'halaman_beranda.dart';
 
 class SurveyKebugaranPage extends StatelessWidget {
   @override
@@ -106,7 +107,12 @@ class SurveyKebugaranPage extends StatelessWidget {
                 width: 150,
                 child: ElevatedButton(
                   onPressed: () {
-                    // Logika untuk proses login dapat ditambahkan di sini
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              HalamanBeranda()), // Ganti HalamanTujuan dengan halaman yang ingin dituju
+                    );
                   },
                   child: Text(
                     'Submit',
