@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'daftar.dart';
+import 'login.dart';
 
-class LoginPage extends StatelessWidget {
+class DaftarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +28,7 @@ class LoginPage extends StatelessWidget {
                 child: TextFormField(
                   style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
-                    hintText: 'Username',
+                    hintText: 'Masukkan Email',
                     hintStyle: TextStyle(color: Colors.white),
                     border: InputBorder.none,
                   ),
@@ -45,7 +45,41 @@ class LoginPage extends StatelessWidget {
                   obscureText: true,
                   style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
-                    hintText: 'Password',
+                    hintText: 'Masukkan Username',
+                    hintStyle: TextStyle(color: Colors.white),
+                    border: InputBorder.none,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10.0),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 10.0),
+                decoration: BoxDecoration(
+                  color: Colors.red,
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: TextFormField(
+                  obscureText: true,
+                  style: TextStyle(color: Colors.white),
+                  decoration: InputDecoration(
+                    hintText: 'Masukkan Password',
+                    hintStyle: TextStyle(color: Colors.white),
+                    border: InputBorder.none,
+                  ),
+                ),
+              ),
+              SizedBox(height: 10.0),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 10.0),
+                decoration: BoxDecoration(
+                  color: Colors.red,
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                child: TextFormField(
+                  obscureText: true,
+                  style: TextStyle(color: Colors.white),
+                  decoration: InputDecoration(
+                    hintText: 'Ulangi Password',
                     hintStyle: TextStyle(color: Colors.white),
                     border: InputBorder.none,
                   ),
@@ -89,11 +123,11 @@ class LoginPage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                           builder: (context) =>
-                              DaftarPage()), // Ganti HalamanTujuan dengan halaman yang ingin dituju
+                              LoginPage()), // Ganti HalamanTujuan dengan halaman yang ingin dituju
                     );
                   },
                   child: Text(
-                    'Belum punya akun? Daftar',
+                    'Sudah punya akun? Login',
                     style: TextStyle(
                       color: Colors.blue,
                       decoration: TextDecoration.underline,
